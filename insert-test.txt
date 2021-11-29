@@ -1,0 +1,14 @@
+Mary,White,BC,4.00,85
+Mike,Hwang,ON,3.70,90
+Liam,Edwards,AB,4.33,70
+Noah,Collins,BC,4.20,71
+SWITCH
+Mike,Hwang,ON,3.70,90
+Mary,White,BC,4.00,85
+Noah,Collins,BC,4.20,71
+Liam,Edwards,AB,4.33,70
+END
+Mary,White,BC,4.00,85
+SWITCH
+Mary,White,BC,4.00,85
+END

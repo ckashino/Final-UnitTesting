@@ -1,0 +1,9 @@
+Mary,White,BC,4.00,85
+GPA
+4.00
+APPID
+20210000
+NAME
+mary white
+END
+
