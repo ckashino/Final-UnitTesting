@@ -13,15 +13,9 @@
 int main()
 {
 
-    ifstream insert_unit("insert-test.txt");
-    string line;
-    int stu_count = 0;
-    int mode = 0;
 
-    
-    
-    dom_basic_test<DS_InsertTest>("insert-test.txt");   
-    dom_searching_test<SearchTest<DSLinkedList, DomesticStudent>, DSLinkedList, DomesticStudent>("search-test.txt");
+    call_all_tests();
+
 
     return 0;
 }

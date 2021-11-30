@@ -59,6 +59,7 @@ class DomesticStudent : public Student {
   protected:
     string province;
   public:
+    ~DomesticStudent(){ return; }
     // DomesticStudent(string _fname, string _lname, float _cpga, int _score, int _id, string _province);
     DomesticStudent();
     DomesticStudent(string _fname, string _lname, float _cgpa, int _score, int _id, string _province);

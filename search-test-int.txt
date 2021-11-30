@@ -1,0 +1,10 @@
+Alex,Zhang,China,3.7,95,24,25,29,26
+GPA
+4.00
+APPID
+20210000
+NAME
+Alex Zhang
+SCORE
+90
+END

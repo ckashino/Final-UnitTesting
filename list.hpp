@@ -6,7 +6,6 @@
 #include <vector>
 
 
-
 template <class type>
 struct Link // Basic Structure for the link in the linked lists, a template to allow use in all lists
 {
@@ -35,6 +34,7 @@ class DSLinkedList
 {
 private:
 public:
+    ~DSLinkedList();
     Link<DomesticStudent> *head, *tail;
     DSLinkedList();
     void Sort(); // Sorting based on interim project (research, cgpa, province)
@@ -50,6 +50,7 @@ class ISLinkedList
 
 private:
 public:
+    ~ISLinkedList();
     Link<InternationalStudent> *head, *tail;
     ISLinkedList();
     void Sort();    // Sorting based on interim project (research, cgpa, province)
@@ -66,6 +67,7 @@ class SLinkedList
 {
     private:
 public:
+    ~SLinkedList();
     Link<Student> *head, *tail;
     SLinkedList();
     SLinkedList(DSLinkedList ds_in, ISLinkedList is_in);
@@ -87,6 +89,7 @@ void compile_students(DSLinkedList ds_in, ISLinkedList is_in, vector<student_dat
 template <class list_type, class link_type>
 void set_tail(list_type *list) // properly sets the tail of a list by finding the last link
 {
+    if(list->head == NULL && list->tail == NULL){ return; }
     Link<link_type> *temp_link = list->head;
     if (temp_link->link == NULL)
     {
@@ -109,10 +112,18 @@ void push_node_to_list(list_type list, type x) // adds a link by placeing it at 
     }
 
     x.set_cgpa(round((x.get_cgpa() * 10)) / 10); // round the gpa now so the searching will work easier
-    Link<type> *new_link = new Link<type>;  
-    new_link->student = x;
-    new_link->link = list->head;    // sets the new student as the head and points to the previous head
-    list->head = new_link;
+    try
+        {
+            Link<type> *new_link = new Link<type>;  
+            new_link->student = x;
+            new_link->link = list->head;    // sets the new student as the head and points to the previous head
+            list->head = new_link;
+        }
+        catch (const std::bad_alloc &)
+        {
+            exit(2);
+        }
+    
 }
 
 
@@ -165,6 +176,10 @@ type *MergeSorted(type *link1, type *link2) // the main helper function of the m
                 {
                     result = link2;
                     result->link = MergeSorted(link1, link2->link);
+                }
+                else{
+                    result = link1;
+                    result->link = MergeSorted(link1->link, link2);
                 }
             }
         }
@@ -238,6 +253,7 @@ void deleteNode(list_type &list, int position)  //  delete function that deletes
     if (position == size)   //  if the position is the size of the list (ie the tail) then use the remove tail helper function
     {
         list.RemoveTail();
+        return;
     }
     if (size > 1 && position != size)   // otherwise find the link to be deleted and appropriately set the nearby links
     {

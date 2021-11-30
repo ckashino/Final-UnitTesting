@@ -1,0 +1,38 @@
+Mary,White,BC,4.00,85
+Mike,Hwang,ON,3.70,90
+Liam,Edwards,AB,4.33,70
+Noah,Collins,BC,4.20,71
+William,Stewart,MB,4.10,72
+James,Sanchez,NB,4.00,73
+Oliver,Morris,NL,3.90,74
+Benjamin,Rogers,NT,3.80,75
+Elijah,Reed,NS,3.70,76
+Lucas,Cook,NU,3.60,77
+Mason,Morgan,ON,3.50,78
+Logan,Bell,PE,3.40,79
+SWITCH
+Mike,Hwang,ON,3.70,90
+Mary,White,BC,4.00,85
+Logan,Bell,PE,3.40,79
+Mason,Morgan,ON,3.50,78
+Lucas,Cook,NU,3.60,77
+Elijah,Reed,NS,3.70,76
+Benjamin,Rogers,NT,3.80,75
+Oliver,Morris,NL,3.90,74
+James,Sanchez,NB,4.00,73
+William,Stewart,MB,4.10,72
+DELETE
+Liam Edwards
+Noah Collins
+END
+SWITCH
+DELETE
+noah Collins
+END
+Mary,White,BC,4.00,85
+Mike,Hwang,ON,3.70,90
+SWITCH
+DELETE
+mary white
+mike Hwang
+END

@@ -1,0 +1,13 @@
+James,Sanchez,NB,4.00,73
+Oliver,Morris,NL,3.90,74
+Benjamin,Rogers,NT,3.80,75
+Elijah,Reed,NS,3.70,76
+Lucas,Cook,NU,3.60,77
+TOINT
+SWITCH
+Lucas,Cook,3.60,77
+Elijah,Reed,3.70,76
+Benjamin,Rogers,3.80,75
+Oliver,Morris,3.90,74
+James,Sanchez,4.00,73
+END

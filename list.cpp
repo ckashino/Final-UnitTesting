@@ -11,7 +11,33 @@
 //  AddNode ->  calls the push_node_to_list template from the header to insert a link to the top of a list, also sorts and sets tail after
 //  Print -> simply prints the information of all the students in a list, from top to bottom
 
-
+DSLinkedList::~DSLinkedList(){
+    Link<DomesticStudent> * current = head;
+    while(current != NULL){
+        Link<DomesticStudent> * next = current->link;
+        current = nullptr;
+        free(current);
+        current = next;
+    }
+}
+SLinkedList::~SLinkedList(){
+    Link<Student> * current = head;
+    while(current != NULL){
+        Link<Student> * next = current->link;
+        current = nullptr;
+        free(current);
+        current = next;
+    }
+}
+ISLinkedList::~ISLinkedList(){
+    Link<InternationalStudent> * current = head;
+    while(current != NULL){
+        Link<InternationalStudent> * next = current->link;
+        current = nullptr;
+        free(current);
+        current = next;
+    }
+}
 void DSLinkedList::RemoveHead(){
     if(head == NULL){   //empty list
         return;
@@ -26,7 +52,7 @@ void DSLinkedList::RemoveHead(){
         else{
             head = head->link;  //next element in list becomes the head
         }
-        delete to_remove;   //delete head
+          //delete head
     }
 
 }
@@ -45,10 +71,10 @@ void DSLinkedList::RemoveTail(){
             while(previous->link != tail){                // loop through the list until the second last element
                 previous = previous->link;                // this is the previous element to the tail
             }
-            tail = previous;          //new tail is the previous
-            tail->link = NULL;        //unlink old tail
-        }
-        delete to_remove;             //delete  old tail
+            previous->link = nullptr;
+            tail = previous;          //new tail is the previous     //unlink old tail
+        }            //delete  old tail
+        delete(to_remove);
     }
 
 }
@@ -203,8 +229,8 @@ void ISLinkedList::RemoveTail(){
             while(previous->link != tail){
                 previous = previous->link;
             }
-            tail = previous;
-            tail->link = NULL;
+            previous->link = nullptr;
+            tail = previous;   
         }
         delete to_remove;
     }
@@ -226,8 +252,8 @@ void SLinkedList::RemoveTail(){
             while(previous->link != tail){
                 previous = previous->link;
             }
-            tail = previous;
-            tail->link = NULL;
+            previous->link = nullptr;
+            tail = previous;   
         }
         delete to_remove;
     }
@@ -248,7 +274,7 @@ void ISLinkedList::RemoveHead(){
         else{
             head = head->link;
         }
-        delete to_remove;
+        // delete to_remove;
     }
 }
 void SLinkedList::RemoveHead(){
@@ -311,13 +337,11 @@ void DSLinkedList::print(){
 void DSLinkedList::AddNode(DomesticStudent x){
     push_node_to_list(this, x);
     Sort();
-    set_tail<DSLinkedList, DomesticStudent>(this);
 }
 
 void ISLinkedList::AddNode(InternationalStudent x){
     push_node_to_list(this, x);
     Sort();
-    set_tail<ISLinkedList, InternationalStudent>(this);
 }
 
 void ISLinkedList::print(){

@@ -1,0 +1,7 @@
+Alex,Zhang,China,3.7,95,24,25,29,26
+Chaewon,Kim,Korea,3.10,82,22,22,23,27
+SWITCH
+Chaewon,Kim,Korea,3.10,82,22,22,23,27
+DELETE
+Alex Zhang
+END

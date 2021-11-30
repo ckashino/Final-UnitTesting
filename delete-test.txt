@@ -1,0 +1,7 @@
+Mary,White,BC,4.00,85
+Mike,Hwang,ON,3.70,90
+SWITCH
+Mike,Hwang,ON,3.70,90
+DELETE
+mary white
+END

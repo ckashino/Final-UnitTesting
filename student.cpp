@@ -101,7 +101,7 @@ InternationalStudent::InternationalStudent(string _fname, string _lname, float _
 
 // a function that checks if a toefl is valid according to the standards listed
 bool InternationalStudent::valid_toefl(){ 
-	if(toefl.total_score < 92 || toefl.reading < 20 || toefl.listening < 20 || toefl.speaking < 20 || toefl.writing < 20){
+	if(toefl.total_score < 93 || toefl.reading < 20 || toefl.listening < 20 || toefl.speaking < 20 || toefl.writing < 20){
 		return false;
 	}
 	return true;

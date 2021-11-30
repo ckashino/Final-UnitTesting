@@ -1,6 +1,8 @@
 #include "list.hpp"
 #include "student.hpp"
 
+
+
 bool compare_students(DomesticStudent stu1, DomesticStudent stu2)
 {
     if (

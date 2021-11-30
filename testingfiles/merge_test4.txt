@@ -1,0 +1,7 @@
+TOINT
+Eunji,Lee,Korea,2.80,85,25,26,26,24
+Alex,Zhang,China,3.7,95,24,25,29,26
+SWITCH
+Alex,Zhang,3.7,95
+Eunji,Lee,2.80,85
+END

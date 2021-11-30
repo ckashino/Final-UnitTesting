@@ -1,0 +1,7 @@
+Mary,White,BC,4.00,85
+TOINT
+Alex,Zhang,China,3.7,95,24,25,29,26
+SWITCH
+Alex,Zhang,3.7,95
+Mary,White,4.00,85
+END

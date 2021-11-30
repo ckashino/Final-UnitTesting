@@ -5,5 +5,7 @@ APPID
 20210000
 NAME
 mary white
+SCORE
+90
 END
 

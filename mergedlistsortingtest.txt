@@ -1,0 +1,8 @@
+Mary,White,BC,4.00,85
+TOINT
+Alex,Zhang,China,3.7,95,24,25,29,26
+GPA
+4.00
+SCORE
+90
+END

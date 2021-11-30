@@ -1,0 +1,6 @@
+Mary,White,BC,4.00,85
+Mike,Hwang,ON,3.70,90
+James,Sanchez,NB,4.00,73
+SWITCH
+Mary,White,BC,4.00,85
+END
